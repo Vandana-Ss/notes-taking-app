@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  <title>Notes App</title>
+</head>
+<body>
+  <header><button class="toggle-btn"><img src="icons/day-night-sun-moon-cycle-svgrepo-com.svg" class="toggle-svg"></button></header>
+  <div>
+    <h1>Notes App</h1>
+  </div>
+
+  <div class="container">
+    <div class="input-container">
+      <input type="text" class="note-title" id="notes-title" placeholder="Title">
+      <textarea placeholder="Enter your note here..." class="note-text" id="notes-id"></textarea>
+    </div>
+
+    <div class="color-add-btn">
+      <div class="color-div">
+        <label>Pick color: </label>
+        <input type="color" id="note-color" />
+      </div>
+      <div class="add-btn-container">
+        <button class="add-button" onClick="addNote()">Add</button>
+        <button onClick="clearAll()" class="add-button clear-button">Clear</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="output-container">
+    <ul id="output"></ul>
+  </div>
+
+  <div id="popup" class="popup hidden">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">×</span>
+      <h2 id="popup-title"></h2>
+      <p id="popup-text"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
